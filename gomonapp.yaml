@@ -16,4 +16,4 @@ spec:
       - name: gomonapp
         image: leo101/gomon:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
