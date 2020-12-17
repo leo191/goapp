@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gomonapp
+spec:
+  selector:
+    matchLabels:
+      run: gomonapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: gomonapp
+    spec:
+      containers:
+      - name: gomonapp
+        image: leo101/gomon:latest
+        ports:
+        - containerPort: 8080
