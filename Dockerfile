@@ -4,7 +4,7 @@ ADD pokemon /src/
 RUN cd /src && go build -o gomon
 
 # final stage
-FROM alpine
+FROM alpine:3.15.3
 WORKDIR /app
 COPY --from=build-env /src/gomon /app/
 COPY --from=build-env /src/templates /app/templates 
